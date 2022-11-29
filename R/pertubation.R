@@ -1,4 +1,4 @@
-pertubation_FUN=function(nbt, S_labeled,Y_labeled, S, Y, method){
+pertubation=function(nbt, S_labeled,Y_labeled, S, Y, method){
 res.bt=NULL
 for(ibt in 1:nbt){
 ptb_wgt <- 4*rbeta(length(S_labeled), 1/2, 3/2)

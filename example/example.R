@@ -16,7 +16,7 @@ roc.sl <- supervised(St, Yt)
 roc.ssROC <- ssROC(S, Y)
 
 ## pertubation
-roc.ssROC.pert=pertubation_FUN(nbt=200, S_labeled=St,Y_labeled=Yt, S=S, Y=S, method="ssROC")
+roc.ssROC.pert=pertubation(nbt=200, S_labeled=St,Y_labeled=Yt, S=S, Y=S, method="ssROC")
 
 
 
