@@ -1,3 +1,20 @@
+-----------------------------------------------------------------------------
+  # Data generation
+  # -----------------------------------------------------------------------------
+
+#' Generating simulated data sets
+#'
+#' @param n_labeled the size of the labeled set
+#' @param N_labeled the size of the unlabeled set
+#' @param mean_1 mean for controls
+#' @param sd_1 sd for controls
+#' @param mean_2 mean for cases
+#' @param sd_2 sd for cases
+#' @param prevalence prevalence of cases
+#' @param misspeci whether the model is correctly specified
+#' @return a simulated datasets containing outcome Y and phenotyping score for both labeled and unlabele sets
+#' @export
+
 data_generation <- function(n_labeled, N_unlabeled, mean_1, sd_1,
                             mean_2, sd_2, prevalence,
                             misspec = FALSE){

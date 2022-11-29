@@ -1,14 +1,17 @@
 # -----------------------------------------------------------------------------
 # SS-ROC Imputation Method
 # -----------------------------------------------------------------------------
-#‘
-#’ Imputation based semi-supervised method
-#' @param S Score
-#' @param Y utcome ontaining NA
-#' @param Wt optional vector of weights
-#' @param fpr desired fpr sequence for output
-#' @param bandwidth bandwidth for smoothing
 #'
+#' Imputation based semi-supervised method
+#' @param S_all phenotyping score S for all, including labeled and unlabeled set
+#' @param Y_all outcome Y for all, including labeled and unlabeled set; containing Y NA
+#' @param W_labeled optional vector of weights for labeled set
+#' @param W_unlabeled optional vector of weights for unlabeled set
+#' @param fpr_vals desired fpr sequence for output
+#' @param bandwidth bandwidth for smoothing
+#' @param ecdf_transform whether conducting cdf transformation
+#' @importFrom stats ecdf
+#' @export
 #' @return list containing
 #' \itemize{
 #'   \item `roc` roc

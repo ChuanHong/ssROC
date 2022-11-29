@@ -1,6 +1,17 @@
-###################################
-#### Supervised ROC estimation ####
-###################################
+# -----------------------------------------------------------------------------
+# Supervised validation
+# -----------------------------------------------------------------------------
+
+#' ROC analysis using supervised method
+#'
+#' @param S_labeled phenotyping score S in labeled set
+#' @param Y_labeled outcome Y in labeled set
+#' @param W_labeled optional vector of weights for labeled set
+#' @param fpr_vals desired fpr sequence for output
+#' @param ecdf_transform Whether conducting cdf transformation
+#' @return List containing AUC and ROC estimates
+#' @importFrom stats ecdf
+#' @export
 
 supervised <- function(S_labeled, Y_labeled, W_labeled = NULL,
                            fpr_vals = seq(0.01, 0.99, by = 0.01),

@@ -16,12 +16,6 @@ roc.sl <- supervised(St, Yt)
 roc.ssROC <- ssROC(S, Y)
 
 ## pertubation
-roc.ssROC.pert=pertubation(nbt=200, S_labeled=St,Y_labeled=Yt, S=S, Y=S, method="ssROC")
-
-
-
-save(roc.sl0, roc.sl, roc.IMP, roc.PARAM, roc.COM,
-     roc.sl.bt, roc.IMP.bt, roc.PARAM.bt, roc.COM.bt,
-     file=paste0("~/Desktop/results/res-N", N+n, "-nv", n, "-setting",setting, "-prev", p, "-seed", seed, ".Rdata"))
-
+roc.sl.pert=pertubation(nbt=20, S_labeled=St,Y_labeled=Yt, S=S, Y=Y, method="supervised")
+roc.ssROC.pert=pertubation(nbt=20, S_labeled=St,Y_labeled=Yt, S=S, Y=Y, method="ssROC")
 
