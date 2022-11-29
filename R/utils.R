@@ -1,5 +1,5 @@
 ## Confidence Interval and Coverage Probability Functions
-library('matrixStats')
+
 
 logit = function(x){log(x/(1-x))}
 
