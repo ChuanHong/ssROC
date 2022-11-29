@@ -1,5 +1,5 @@
 
-devtools::install_github(repo = "https://github.com/ChuanHong/ssROCtesting")
+devtools::install_github(repo = "https://github.com/ChuanHong/ssROCtesting", force=T)
 library(ssROC)
 n <- 300; N <- 5000 - 300; p <- 0.3; boot <- FALSE; nbt <- 2; setting <- 1; seed <- 1
 m2 <- 0.3; m1 <- 0.7; s2 <- 0.2; s1 <- 0.3
